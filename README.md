@@ -132,9 +132,9 @@ $ ./autogen.sh --enable-debug
 $ vagrant up hub
 $ vagrant ssh hub
 $ cd /northern.tech/cfengine/core
-$ make -j2 && sudo make install
+$ ./configure && make && sudo make -j2 install
 $ cd ../masterfiles
-$ make -j2 && sudo make install
+$ ./configure && make && sudo make -j2 install
 $ sudo su -
 # /var/cfengine/bin/cf-key
 # /var/cfengine/bin/cf-agent --bootstrap 192.168.56.90
@@ -145,7 +145,7 @@ $ sudo su -
 $ vagrant up client
 $ vagrant ssh client
 $ cd /northern.tech/cfengine/core
-$ make -j2 && sudo make install
+$ ./configure && make && sudo make -j2 install
 $ sudo su -
 # /var/cfengine/bin/cf-key
 # /var/cfengine/bin/cf-agent --bootstrap 192.168.56.90
